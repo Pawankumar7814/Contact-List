@@ -1,0 +1,120 @@
+/* CSS For container */
+
+.container {
+    background-color: beige;
+    width: 80vw;
+    height: 86vh;
+    min-height: 80vh;
+    max-height: 100vh;
+    margin: 0px auto;
+}
+
+.sub-container {
+    width: 50%;
+}
+
+.form-container {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0% 2%;
+}
+
+.list-container {
+    /* background-color: red; */
+    width: 97.5%;
+    height: 50vh;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.list-container ul {
+    list-style: none;
+}
+
+.list-container ul li {
+    height: 40px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* CSS for text or fonts */
+
+.text-align-center {
+    text-align: center;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 65px;
+    margin: 0% 2%;
+    min-width: 50px;
+    max-width: 70px;
+    padding: 6px;
+    transition: all 0.8s ease;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: cornflowerblue;
+    border: none;
+    transform: scale(1.2, 1.2);
+}
+
+.close-btn {
+    display: inline;
+}
+
+
+/* Flex Class */
+
+.flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+
+/* CSS for Positioning */
+
+.align-center-horizontally {
+    margin: 0% auto;
+}
+
+
+/* CSS for margin */
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+
+/* CSS for backgroung */
+
+.background-theme-1 {
+    background: linear-gradient(to right, violet, cadetblue);
+    color: aliceblue;
+    transition: all 0.8s ease-in-out;
+}
+
+.background-theme-1:hover {
+    color: aliceblue;
+    transform: scaleX(3);
+}

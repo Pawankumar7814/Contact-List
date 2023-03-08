@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/CSS/home.css">
+    <link rel="stylesheet" href="/CSS/utility.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <div class="heading text-align-center background-theme-1">
+        My Contact List
+    </div>
+    <div class="container">
+        <div class="sub-container flex justify-content-center align-center-horizontally">
+            <div class="form-container">
+                <div class="sub-heading text-align-center mb-50">
+                    <h2>
+                        Add Contact
+                    </h2>
+                </div>
+                <form action="/add-contact" method="post">
+                    <div class="form-item justify-content-space-between">
+                        <label for="">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-item justify-content-space-between">
+                        <label for="">Contact No</label>
+                        <input type="number" name="contact_no" id="contact_no" placeholder="+91 921066xxxx">
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="btn">Add</button>
+                        <button type="reset" class="btn">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="list-container">
+            <ul>
+                <% for(let i of contacts) { %>
+                    <li>
+                        <div class="item-container">
+                            <span>
+                                <%= i.name %>
+                            </span>
+                            <span>
+                                <%= i.phone %>
+                            </span>
+                            <div class="close-btn">
+                                <a href="/delete-contact/?id=<%= i.id %>"><i class="fas fa-window-close"></i></a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <% } %>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
