@@ -39,7 +39,6 @@ app.get('/', async function(req, res) {
         console.log(err);
         return;
     }
-
 });
 
 // Adding the contact to the database
@@ -49,7 +48,6 @@ app.post('/add-contact', async function(req, res) {
             name: req.body.name,
             phone: req.body.contact_no
         });
-
         return res.redirect('back');
     } catch (err) {
         console.log(err);
@@ -65,8 +63,7 @@ app.get('/delete-contact', async function(req, res) {
     } catch (err) {
         console.log(err);
     }
-
-})
+});
 
 // -------------- Start server ------------------------
 // Creating the server
